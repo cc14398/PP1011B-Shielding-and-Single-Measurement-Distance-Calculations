@@ -1,0 +1,17 @@
+#=====================================================
+# SOURCE 
+#=====================================================
+
+/gate/source/addSource Cobalt57
+/gate/source/Cobalt57/gps/type Volume
+/gate/source/Cobalt57/gps/shape Cylinder
+/gate/source/Cobalt57/gps/radius 5. cm
+/gate/source/Cobalt57/gps/halfz 5 cm
+/gate/source/Cobalt57/gps/centre 0. 0. 0. cm
+/gate/source/Cobalt57/gps/particle gamma
+/gate/source/Cobalt57/gps/energy 122 keV
+/gate/source/Cobalt57/gps/energy 136 keV
+/gate/source/Cobalt57/setActivity 120000000. Bq
+/gate/source/Cobalt57/setForcedHalfLife 23405760. s
+/gate/source/Cobalt57/gps/angtype iso
+

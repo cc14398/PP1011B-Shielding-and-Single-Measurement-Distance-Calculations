@@ -1,0 +1,63 @@
+##### ===========================================================================================
+##
+##    MACRO FILE - Cyclinder source on box example - FEB 2019
+##
+##### ===========================================================================================
+
+
+## =====================================================
+## VISUALISATION & VERBOSE
+## =====================================================
+
+#/vis/disable
+/control/execute mac/visu.mac
+/vis/scene/endOfEventAction accumulate 100
+/vis/viewer/set/viewpointThetaPhi 90 0
+
+## =====================================================
+## Materials
+## =====================================================
+
+/gate/geometry/setMaterialDatabase GateMaterials.db
+
+## =====================================================
+## World and Physics 
+## =====================================================
+/gate/world/geometry/setXLength 5 m
+/gate/world/geometry/setYLength 5 m
+/gate/world/geometry/setZLength 5 m
+/gate/world/setMaterial Air
+
+/gate/physics/addPhysicsList emstandard_opt3
+
+/gate/physics/Gamma/SetCutInRegion      world 5 mm
+/gate/physics/Electron/SetCutInRegion   world 5 mm
+/gate/physics/Positron/SetCutInRegion   world 5 mm
+## =====================================================
+## Geometry, Physics and Output for Each Object
+## =====================================================
+
+/control/execute mac/SubMacros/Detector1.mac
+
+/gate/physics/displayCuts
+
+## =====================================================
+## INITIALISATION
+## =====================================================
+
+/gate/run/initialize
+
+## =====================================================
+## BEAMS
+## =====================================================
+/control/execute mac/SubMacros/Cobalt60.mac
+
+## =====================================================
+## START BEAMS
+## =====================================================
+/gate/random/setEngineName MersenneTwister
+/gate/random/setEngineSeed 123455
+/gate/application/noGlobalOutput
+
+/gate/application/setTotalNumberOfPrimaries 100
+/gate/application/start

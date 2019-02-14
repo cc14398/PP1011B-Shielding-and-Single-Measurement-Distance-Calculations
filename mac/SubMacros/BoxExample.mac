@@ -1,0 +1,42 @@
+#=====================================================
+# Define Box 
+#=====================================================
+
+/gate/world/daughters/name             BoxName
+/gate/world/daughters/insert            box
+/gate/BoxName/placement/setTranslation  100.0 100.0 0.0 mm
+/gate/BoxName/geometry/setXLength   50 mm
+/gate/BoxName/geometry/setYLength   50 mm
+/gate/BoxName/geometry/setZLength   50 mm
+/gate/BoxName/setMaterial Lead
+/gate/BoxName/vis/setVisible 1
+/gate/BoxName/vis/setColor             white
+
+##################### PHYSICS CUTS ######################
+#Cut on max step size at least 1/100 thickness of volume being traversed by particles
+/gate/physics/Gamma/SetCutInRegion      BoxName 0.1 mm 
+/gate/physics/Electron/SetCutInRegion   BoxName 0.1 mm
+/gate/physics/Positron/SetCutInRegion   BoxName 0.1 mm
+
+######################## Output #########################
+/gate/actor/addActor                           DoseActor  EnergyDepBox
+/gate/actor/EnergyDepBox/save                  Box.root
+/gate/actor/EnergyDepBox/attachTo              BoxName 
+/gate/actor/EnergyDepBox/stepHitType           random
+/gate/actor/EnergyDepBox/setPosition           0.0 0.0 0.0 mm #Now in coordinate system of box
+/gate/actor/EnergyDepBox/setSize               50 50 50 mm
+/gate/actor/EnergyDepBox/setResolution         10 10 10 
+/gate/actor/EnergyDepBox/enableEdep            true
+/gate/actor/EnergyDepBox/enableDose            false
+/gate/actor/EnergyDepBox/enableSquaredEdep     false #options not typed are false by default except Dose
+/gate/actor/EnergyDepBox/enableNumberOfHits    false #turn on as required
+
+/gate/actor/addActor                      PhaseSpaceActor PSBox
+/gate/actor/PSBox/save                    PSBoxPS.root
+/gate/actor/PSBox/attachTo                BoxName
+/gate/actor/PSBox/enableEkine             true
+/gate/actor/PSBox/enableXDirection        true
+/gate/actor/PSBox/enableYDirection        true
+/gate/actor/PSBox/enableZDirection        true
+/gate/actor/PSBox/enableProductionVolume  true
+/gate/actor/PSBox/enableProductionProcess true

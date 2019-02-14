@@ -1,0 +1,15 @@
+#=====================================================
+# SOURCE 
+#=====================================================
+
+/gate/source/addSource SourceExample
+/gate/source/SourceExample/gps/type Volume
+/gate/source/SourceExample/gps/shape Cylinder
+/gate/source/SourceExample/gps/radius 2. cm
+/gate/source/SourceExample/gps/halfz 14.5 cm
+/gate/source/SourceExample/gps/centre 0. 0. 0. cm
+/gate/source/SourceExample/gps/particle gamma
+/gate/source/SourceExample/gps/energy 140. keV
+/gate/source/SourceExample/setActivity 30000. Bq
+/gate/source/SourceExample/gps/angtype iso
+
