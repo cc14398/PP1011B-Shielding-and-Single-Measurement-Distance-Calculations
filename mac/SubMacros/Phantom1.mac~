@@ -4,38 +4,20 @@
 
 /gate/world/daughters/name             Phantom1
 /gate/world/daughters/insert            cylinder
-/gate/Phantom1/placement/setTranslation  0.5 0.0 0.0 m
-/gate/Phantom1/geometry/seRmax   12.5 cm
-/gate/Phantom1/geometry/setHeight   50 mm
-/gate/Phantom1/setMaterial water
+/gate/Phantom1/placement/setTranslation  50.0 0.0 0.0 cm
+/gate/Phantom1/placement/setRotationAxis 0 0 1
+/gate/Phantom1/placement/setRotationAngle 90 deg
+/gate/Phantom1/geometry/setRmin   0 cm
+/gate/Phantom1/geometry/setRmax   12.5 cm
+/gate/Phantom1/geometry/setHeight   150 cm
+/gate/Phantom1/geometry/setPhiStart 0 deg
+/gate/Phantom1/geometry/setDeltaPhi 360 deg
+/gate/Phantom1/setMaterial Water
 /gate/Phantom1/vis/setVisible 1
-/gate/Phantom1/vis/setColor             white
+/gate/Phantom1/vis/setColor             blue
 
 ##################### PHYSICS CUTS ######################
 #Cut on max step size at least 1/100 thickness of volume being traversed by particles
-/gate/physics/Gamma/SetCutInRegion      BoxName 0.25 mm 
-/gate/physics/Electron/SetCutInRegion   BoxName 0.25 mm
-/gate/physics/Positron/SetCutInRegion   BoxName 0.25 mm
-
-######################## Output need to fix DoseActor shape #########################
-/gate/actor/addActor                           DoseActor  EnergyDepBox
-/gate/actor/EnergyDepBox/save                  Phantom1.root
-/gate/actor/EnergyDepBox/attachTo              Phantom1 
-/gate/actor/EnergyDepBox/stepHitType           random
-/gate/actor/EnergyDepBox/setPosition           0.0 0.0 0.0 mm #Now in coordinate system of box
-/gate/actor/EnergyDepBox/setSize               50 50 50 mm
-/gate/actor/EnergyDepBox/setResolution         10 10 10 
-/gate/actor/EnergyDepBox/enableEdep            true
-/gate/actor/EnergyDepBox/enableDose            false
-/gate/actor/EnergyDepBox/enableSquaredEdep     false #options not typed are false by default except Dose
-/gate/actor/EnergyDepBox/enableNumberOfHits    false #turn on as required
-
-/gate/actor/addActor                      PhaseSpaceActor PSPhantom1
-/gate/actor/PSBox/save                    Phantom1PS.root
-/gate/actor/PSBox/attachTo                Phantom1
-/gate/actor/PSBox/enableEkine             true
-/gate/actor/PSBox/enableXDirection        true
-/gate/actor/PSBox/enableYDirection        true
-/gate/actor/PSBox/enableZDirection        true
-/gate/actor/PSBox/enableProductionVolume  true
-/gate/actor/PSBox/enableProductionProcess true
+/gate/physics/Gamma/SetCutInRegion      Phantom1 0.1 mm 
+/gate/physics/Electron/SetCutInRegion   Phantom1 0.1 mm
+/gate/physics/Positron/SetCutInRegion   Phantom1 0.1 mm

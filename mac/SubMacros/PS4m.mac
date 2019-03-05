@@ -1,0 +1,44 @@
+#=====================================================
+# Define Box 
+#=====================================================
+
+/gate/world/daughters/name             PSBox4
+/gate/world/daughters/insert            box
+/gate/PSBox4/placement/setTranslation  4. 0. 0. m
+#/gate/PSBox4/placement/setRotationAxis 0 1 0
+#/gate/PSBox4/placement/setRotationAngle 45 deg
+/gate/PSBox4/geometry/setXLength   5 cm
+/gate/PSBox4/geometry/setYLength   5 cm
+/gate/PSBox4/geometry/setZLength   5 cm
+/gate/PSBox4/setMaterial Air
+/gate/PSBox4/vis/setVisible 1
+/gate/PSBox4/vis/setColor             white
+
+##################### PHYSICS CUTS ######################
+#Cut on max step size at least 1/100 thickness of volume being traversed by particles
+/gate/physics/Gamma/SetCutInRegion      PSBox4 0.05 mm 
+/gate/physics/Electron/SetCutInRegion   PSBox4 0.05 mm
+/gate/physics/Positron/SetCutInRegion   PSBox4 0.05 mm
+
+######################## Output #########################
+#/gate/actor/addActor                           DoseActor  EnergyDepDet1
+#/gate/actor/EnergyDepDet1/save                  Detector1.txt
+#/gate/actor/EnergyDepDet1/attachTo              Detector1 
+#/gate/actor/EnergyDepDet1/stepHitType           random
+#/gate/actor/EnergyDepDet1/setPosition           0.0 0.0 0.0 mm #Now in coordinate system of box
+#/gate/actor/EnergyDepDet1/setSize               5 5 5 cm
+#/gate/actor/EnergyDepDet1/setResolution         10 10 10 
+#/gate/actor/EnergyDepDet1/enableEdep            true
+#/gate/actor/EnergyDepDet1/enableDose            false
+#/gate/actor/EnergyDepDet1/enableSquaredEdep     true #options not typed are false by default except Dose
+#/gate/actor/EnergyDepDet1/enableNumberOfHits    true #turn on as required
+
+/gate/actor/addActor                      PhaseSpaceActor PS4m
+/gate/actor/PS4m/save                    PS4m.root
+/gate/actor/PS4m/attachTo                PSBox4
+/gate/actor/PS4m/enableEkine             true
+/gate/actor/PS4m/enableXDirection        true
+/gate/actor/PS4m/enableYDirection        true
+/gate/actor/PS4m/enableZDirection        true
+/gate/actor/PS4m/enableProductionVolume  true
+/gate/actor/PS4m/enableProductionProcess true

@@ -1,0 +1,44 @@
+#=====================================================
+# Define Box 
+#=====================================================
+
+/gate/world/daughters/name             Detector2
+/gate/world/daughters/insert            box
+/gate/Detector2/placement/setTranslation  0.9 0. -0.9 m
+/gate/Detector2/placement/setRotationAxis 0 1 0
+/gate/Detector2/placement/setRotationAngle 45 deg
+/gate/Detector2/geometry/setXLength   5 cm
+/gate/Detector2/geometry/setYLength   5 cm
+/gate/Detector2/geometry/setZLength   5 cm
+/gate/Detector2/setMaterial Germanium
+/gate/Detector2/vis/setVisible 1
+/gate/Detector2/vis/setColor             white
+
+##################### PHYSICS CUTS ######################
+#Cut on max step size at least 1/100 thickness of volume being traversed by particles
+/gate/physics/Gamma/SetCutInRegion      Detector1 0.05 mm 
+/gate/physics/Electron/SetCutInRegion   Detector1 0.05 mm
+/gate/physics/Positron/SetCutInRegion   Detector1 0.05 mm
+
+######################## Output #########################
+/gate/actor/addActor                           DoseActor  EnergyDepDet2
+/gate/actor/EnergyDepDet2/save                  Detector2.txt
+/gate/actor/EnergyDepDet2/attachTo              Detector2 
+/gate/actor/EnergyDepDet2/stepHitType           random
+/gate/actor/EnergyDepDet2/setPosition           0.0 0.0 0.0 mm #Now in coordinate system of box
+/gate/actor/EnergyDepDet2/setSize               5 5 5 cm
+/gate/actor/EnergyDepDet2/setResolution         10 10 10 
+/gate/actor/EnergyDepDet2/enableEdep            true
+/gate/actor/EnergyDepDet2/enableDose            false
+/gate/actor/EnergyDepDet2/enableSquaredEdep     false #options not typed are false by default except Dose
+/gate/actor/EnergyDepDet2/enableNumberOfHits    false #turn on as required
+
+/gate/actor/addActor                      PhaseSpaceActor PSDetector2
+/gate/actor/PSDetector2/save                    Detector2PS.root
+/gate/actor/PSDetector2/attachTo                Detector2
+/gate/actor/PSDetector2/enableEkine             true
+/gate/actor/PSDetector2/enableXDirection        true
+/gate/actor/PSDetector2/enableYDirection        true
+/gate/actor/PSDetector2/enableZDirection        true
+/gate/actor/PSDetector2/enableProductionVolume  true
+/gate/actor/PSDetector2/enableProductionProcess true

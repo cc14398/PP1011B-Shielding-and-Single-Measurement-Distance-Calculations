@@ -1,0 +1,44 @@
+#=====================================================
+# Define Box 
+#=====================================================
+
+/gate/world/daughters/name             PSBox6
+/gate/world/daughters/insert            box
+/gate/PSBox6/placement/setTranslation  6. 0. 0. m
+#/gate/PSBox6/placement/setRotationAxis 0 1 0
+#/gate/PSBox6/placement/setRotationAngle 45 deg
+/gate/PSBox6/geometry/setXLength   5 cm
+/gate/PSBox6/geometry/setYLength   5 cm
+/gate/PSBox6/geometry/setZLength   5 cm
+/gate/PSBox6/setMaterial Air
+/gate/PSBox6/vis/setVisible 1
+/gate/PSBox6/vis/setColor             white
+
+##################### PHYSICS CUTS ######################
+#Cut on max step size at least 1/100 thickness of volume being traversed by particles
+/gate/physics/Gamma/SetCutInRegion      PSBox6 0.05 mm 
+/gate/physics/Electron/SetCutInRegion   PSBox6 0.05 mm
+/gate/physics/Positron/SetCutInRegion   PSBox6 0.05 mm
+
+######################## Output #########################
+#/gate/actor/addActor                           DoseActor  EnergyDepDet1
+#/gate/actor/EnergyDepDet1/save                  Detector1.txt
+#/gate/actor/EnergyDepDet1/attachTo              Detector1 
+#/gate/actor/EnergyDepDet1/stepHitType           random
+#/gate/actor/EnergyDepDet1/setPosition           0.0 0.0 0.0 mm #Now in coordinate system of box
+#/gate/actor/EnergyDepDet1/setSize               5 5 5 cm
+#/gate/actor/EnergyDepDet1/setResolution         10 10 10 
+#/gate/actor/EnergyDepDet1/enableEdep            true
+#/gate/actor/EnergyDepDet1/enableDose            false
+#/gate/actor/EnergyDepDet1/enableSquaredEdep     true #options not typed are false by default except Dose
+#/gate/actor/EnergyDepDet1/enableNumberOfHits    true #turn on as required
+
+/gate/actor/addActor                      PhaseSpaceActor PS6m
+/gate/actor/PS6m/save                    PS6m.root
+/gate/actor/PS6m/attachTo                PSBox6
+/gate/actor/PS6m/enableEkine             true
+/gate/actor/PS6m/enableXDirection        true
+/gate/actor/PS6m/enableYDirection        true
+/gate/actor/PS6m/enableZDirection        true
+/gate/actor/PS6m/enableProductionVolume  true
+/gate/actor/PS6m/enableProductionProcess true

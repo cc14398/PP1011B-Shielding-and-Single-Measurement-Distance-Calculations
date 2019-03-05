@@ -1,0 +1,44 @@
+#=====================================================
+# Define Box 
+#=====================================================
+
+/gate/world/daughters/name             PSBox2
+/gate/world/daughters/insert            box
+/gate/PSBox2/placement/setTranslation  2. 0. 0. m
+#/gate/PSBox2/placement/setRotationAxis 0 1 0
+#/gate/PSBox2/placement/setRotationAngle 45 deg
+/gate/PSBox2/geometry/setXLength   5 cm
+/gate/PSBox2/geometry/setYLength   5 cm
+/gate/PSBox2/geometry/setZLength   5 cm
+/gate/PSBox2/setMaterial Air
+/gate/PSBox2/vis/setVisible 1
+/gate/PSBox2/vis/setColor             white
+
+##################### PHYSICS CUTS ######################
+#Cut on max step size at least 1/100 thickness of volume being traversed by particles
+/gate/physics/Gamma/SetCutInRegion      Detector1 0.05 mm 
+/gate/physics/Electron/SetCutInRegion   Detector1 0.05 mm
+/gate/physics/Positron/SetCutInRegion   Detector1 0.05 mm
+
+######################## Output #########################
+#/gate/actor/addActor                           DoseActor  EnergyDepDet1
+#/gate/actor/EnergyDepDet1/save                  Detector1.txt
+#/gate/actor/EnergyDepDet1/attachTo              Detector1 
+#/gate/actor/EnergyDepDet1/stepHitType           random
+#/gate/actor/EnergyDepDet1/setPosition           0.0 0.0 0.0 mm #Now in coordinate system of box
+#/gate/actor/EnergyDepDet1/setSize               5 5 5 cm
+#/gate/actor/EnergyDepDet1/setResolution         10 10 10 
+#/gate/actor/EnergyDepDet1/enableEdep            true
+#/gate/actor/EnergyDepDet1/enableDose            false
+#/gate/actor/EnergyDepDet1/enableSquaredEdep     true #options not typed are false by default except Dose
+#/gate/actor/EnergyDepDet1/enableNumberOfHits    true #turn on as required
+
+/gate/actor/addActor                      PhaseSpaceActor PS2m
+/gate/actor/PS2m/save                    PS1m.root
+/gate/actor/PS2m/attachTo                PSBox2
+/gate/actor/PS2m/enableEkine             true
+/gate/actor/PS2m/enableXDirection        true
+/gate/actor/PS2m/enableYDirection        true
+/gate/actor/PS2m/enableZDirection        true
+/gate/actor/PS2m/enableProductionVolume  true
+/gate/actor/PS2m/enableProductionProcess true

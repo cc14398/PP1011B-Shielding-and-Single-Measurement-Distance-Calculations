@@ -4,34 +4,34 @@
 
 /gate/world/daughters/name             Detector1
 /gate/world/daughters/insert            box
-/gate/Detector1/placement/setTranslation  2. 0. 2. m
-/gate/Detector1/placement/setRotationAxis 0 1 0
-/gate/Detector1/placement/setRotationAngle 45 deg
-/gate/Detector1/geometry/setXLength   50 cm
-/gate/Detector1/geometry/setYLength   50 cm
-/gate/Detector1/geometry/setZLength   50 cm
+/gate/Detector1/placement/setTranslation  1. 0. 0. m
+#/gate/Detector1/placement/setRotationAxis 0 1 0
+#/gate/Detector1/placement/setRotationAngle 45 deg
+/gate/Detector1/geometry/setXLength   5 cm
+/gate/Detector1/geometry/setYLength   5 cm
+/gate/Detector1/geometry/setZLength   5 cm
 /gate/Detector1/setMaterial Germanium
 /gate/Detector1/vis/setVisible 1
 /gate/Detector1/vis/setColor             white
 
 ##################### PHYSICS CUTS ######################
 #Cut on max step size at least 1/100 thickness of volume being traversed by particles
-/gate/physics/Gamma/SetCutInRegion      Detector1 0.5 mm 
-/gate/physics/Electron/SetCutInRegion   Detector1 0.5 mm
-/gate/physics/Positron/SetCutInRegion   Detector1 0.5 mm
+/gate/physics/Gamma/SetCutInRegion      Detector1 0.05 mm 
+/gate/physics/Electron/SetCutInRegion   Detector1 0.05 mm
+/gate/physics/Positron/SetCutInRegion   Detector1 0.05 mm
 
 ######################## Output #########################
 /gate/actor/addActor                           DoseActor  EnergyDepDet1
-/gate/actor/EnergyDepDet1/save                  Detector1.root
+/gate/actor/EnergyDepDet1/save                  Detector1.txt
 /gate/actor/EnergyDepDet1/attachTo              Detector1 
 /gate/actor/EnergyDepDet1/stepHitType           random
 /gate/actor/EnergyDepDet1/setPosition           0.0 0.0 0.0 mm #Now in coordinate system of box
-/gate/actor/EnergyDepDet1/setSize               50 50 50 cm
+/gate/actor/EnergyDepDet1/setSize               5 5 5 cm
 /gate/actor/EnergyDepDet1/setResolution         10 10 10 
 /gate/actor/EnergyDepDet1/enableEdep            true
 /gate/actor/EnergyDepDet1/enableDose            false
-/gate/actor/EnergyDepDet1/enableSquaredEdep     false #options not typed are false by default except Dose
-/gate/actor/EnergyDepDet1/enableNumberOfHits    false #turn on as required
+/gate/actor/EnergyDepDet1/enableSquaredEdep     true #options not typed are false by default except Dose
+/gate/actor/EnergyDepDet1/enableNumberOfHits    true #turn on as required
 
 /gate/actor/addActor                      PhaseSpaceActor PSDetector1
 /gate/actor/PSDetector1/save                    Detector1PS.root
