@@ -2,17 +2,17 @@
 # SOURCE 
 #=====================================================
 
-/gate/source/addSource Cobalt60
-/gate/source/Cobalt60/gps/type Volume
-/gate/source/Cobalt60/gps/shape Cylinder
-/gate/source/Cobalt60/gps/radius 5. cm
-/gate/source/Cobalt60/gps/halfz 5 cm
-/gate/source/Cobalt60/gps/centre 0. 0. 0. cm
-/gate/source/Cobalt60/gps/particle gamma
-/gate/source/Cobalt60/gps/energytype UserSpectrum
-/gate/source/Cobalt60/gps/setSpectrumFile mac/SubMacros/Co60Discrete.txt
-/gate/source/Cobalt60/setActivity 37000000. Bq
-/gate/source/Cobalt60/setForcedHalfLife 166308552. s
-/gate/source/Cobalt60/gps/angtype iso
-#/gate/source/Cobalt60/attachTo Phantom1
+/gate/source/addSource Caesium137
+/gate/source/Caesium137/gps/type Volume
+/gate/source/Caesium137/gps/shape Cylinder
+/gate/source/Caesium137/gps/radius 5. cm
+/gate/source/Caesium137/gps/halfz 5 cm
+/gate/source/Caesium137/gps/centre 0. 0. 0. cm
+/gate/source/Caesium137/gps/particle gamma
+/gate/source/Caesium137/gps/energytype UserSpectrum
+/gate/source/Caesium137/gps/setSpectrumFile mac/SubMacros/Cs137Discrete.txt
+/gate/source/Caesium137/setActivity 1000000000. Bq
+/gate/source/Caesium137/setForcedHalfLife 951441120. s
+/gate/source/Caesium137/gps/angtype iso
+#/gate/source/Caesium137/attachTo Phantom1
 

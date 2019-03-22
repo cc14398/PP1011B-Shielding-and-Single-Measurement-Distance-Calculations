@@ -1,0 +1,29 @@
+universe = vanilla
+getenv = true
+Executable     = /software/lb8075/gate/GateInstall/bin/Gate
+transfer_input_files = transfers/transfer_script_Co60-1s-12Mar, GateMaterials.db, Materials.xml
+request_cpus = 1
+request_memory = 120
+when_to_transfer_output = on_exit_or_evict
+requirements=(OpSysAndVer == "SL6") && Target.Machine=!="hd-38-18.dice.priv"
++PostCmd        = "transfer_script_Co60-1s-12Mar"
+
+
+Arguments      = /usersc/cc14398/StationarySourceGate/gateSplitDir/.Gate//Co60-1s-12Mar//Co60-1s-12Mar1.mac
+Output         = /storage/cc14398/Co60-1s-12Mar/Co60-1s-12Mar1.out
+Error          = /storage/cc14398/Co60-1s-12Mar/Co60-1s-12Mar1.err
+Log            = /storage/cc14398/Co60-1s-12Mar/Co60-1s-12Mar1.log
+Queue
+
+Arguments      = /usersc/cc14398/StationarySourceGate/gateSplitDir/.Gate//Co60-1s-12Mar//Co60-1s-12Mar2.mac
+Output         = /storage/cc14398/Co60-1s-12Mar/Co60-1s-12Mar2.out
+Error          = /storage/cc14398/Co60-1s-12Mar/Co60-1s-12Mar2.err
+Log            = /storage/cc14398/Co60-1s-12Mar/Co60-1s-12Mar2.log
+Queue
+
+Arguments      = /usersc/cc14398/StationarySourceGate/gateSplitDir/.Gate//Co60-1s-12Mar//Co60-1s-12Mar3.mac
+Output         = /storage/cc14398/Co60-1s-12Mar/Co60-1s-12Mar3.out
+Error          = /storage/cc14398/Co60-1s-12Mar/Co60-1s-12Mar3.err
+Log            = /storage/cc14398/Co60-1s-12Mar/Co60-1s-12Mar3.log
+Queue
+

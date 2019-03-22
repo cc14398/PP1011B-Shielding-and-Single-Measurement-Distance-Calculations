@@ -1,13 +1,25 @@
 import numpy as np
+import scipy as sp
 import math
 from matplotlib import pylab as plt
 from ROOT import TTree, TFile, TH2D, TCanvas, TH1F, gROOT
 from root_numpy import array2hist, hist2array, fill_hist, tree2array,root2array
 
-input1="PS1m.root"
-input2="PS2m.root"
-input3="PS3m.root"
-input4="PS4m.root"
+#input1="SavedData/DistanceTests/Isotropic/5Mar-Co60-37MBq-100ms-5m.root"
+#input2="SavedData/DistanceTests/Isotropic/7Mar-Cs137-100ms-1m.root"
+#input2="SavedData/Shielding/Isotropic/1Mar-PSonly-Co60-33MBq-100ms-3m-Bp.root"
+#input3="SavedData/Shielding/Isotropic/6Mar-Co60-37MBq-100ms-2m-Phantom.root"
+#input4="SavedData/Shielding/Isotropic/6Mar-Co60-37MBq-100ms-8m-Phantom.root"
+#input2="SavedData/Shielding/ParticleGun/5Mar-Co60-PartGun-Bp-1m.root"
+#input3="SavedData/Shielding/ParticleGun/5Mar-Co60-PartGun-Ph-1m.root"
+#input4="SavedData/Shielding/Isotropic/1Mar-PSonly-Co60-33MBq-100ms-8m-Bp.root"
+
+input1="../../../storage/cc14398/Co60-10s-15Mar/Co60-10s-PS1m.root"
+input2="../../../storage/cc14398/Co60-10s-15Mar/Co60-10s-PS3m.root"
+input3="../../../storage/cc14398/Co60-10s-15Mar/Co60-10s-PS7m.root"
+input4="../../../storage/cc14398/Co60-10s-15Mar/Co60-10s-PS8m.root"
+
+
 KE1=root2array(input1,treename="PhaseSpace", branches="Ekine")
 KE2=root2array(input2,treename="PhaseSpace",branches="Ekine")
 KE3=root2array(input3,treename="PhaseSpace",branches="Ekine")
@@ -15,13 +27,17 @@ KE4=root2array(input4,treename="PhaseSpace",branches="Ekine")
 
 #dX=root2array(inputFile,treename="PhaseSpace", branches="dX")
 
-#plt.hist(E_kinetic,bins=20)
+plt.hist(KE4,bins=20)
 #plt.hist2d(E_kinetic,dX)
-#plt.legend()
 
-fig, ax1 = plt.subplots()
-ax1.hist([KE1,KE2,KE3,KE4], label=['1m','2m','3m','4m'])
-#plt.legend(bbox_to_anchor=(1,1))
+
+#fig, ax1 = plt.subplots()
+#ax1.hist([KE1,KE2,KE3], label=['1m','3m','7m'],bins=15,density=True)
+
+#plt.hist(KE1,20,alpha=0.5,label='1m',range=[0,1.1],density=True)
+#plt.hist(KE2,20,alpha=0.5,label='4m',range=[0,1.1],density=True)
+#plt.hist(KE3,20,alpha=0.5,label='7m',range=[0,1.1],density=True)
+
 plt.legend()
 plt.pause(0.01)
 input("press enter to exit")

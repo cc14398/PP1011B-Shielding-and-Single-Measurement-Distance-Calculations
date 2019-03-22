@@ -1,0 +1,18 @@
+#=====================================================
+# SOURCE 
+#=====================================================
+
+/gate/source/addSource Caesium137
+/gate/source/Caesium137/gps/type Volume
+/gate/source/Caesium137/gps/shape Cylinder
+/gate/source/Caesium137/gps/radius 5. cm
+/gate/source/Caesium137/gps/halfz 5 cm
+/gate/source/Caesium137/gps/centre 0. 0. 0. cm
+/gate/source/Caesium137/gps/particle gamma
+/gate/source/Caesium137/gps/energytype UserSpectrum
+/gate/source/Caesium137/gps/setSpectrumFile usersc/cc14398/StationarySourceGate/mac/SubMacros/Cs137Discrete.txt
+/gate/source/Caesium137/setActivity 37000000. Bq
+/gate/source/Caesium137/setForcedHalfLife 951441120. s
+/gate/source/Caesium137/gps/angtype iso
+#/gate/source/Caesium137/attachTo Phantom1
+

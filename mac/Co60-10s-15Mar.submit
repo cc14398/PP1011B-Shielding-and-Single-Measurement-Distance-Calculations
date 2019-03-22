@@ -1,0 +1,71 @@
+universe = vanilla
+getenv = true
+Executable     = /software/lb8075/gate/GateInstall/bin/Gate
+transfer_input_files = transfers/transfer_script_Co60-10s-15Mar, GateMaterials.db, Materials.xml
+request_cpus = 1
+request_memory = 120
+when_to_transfer_output = on_exit_or_evict
+requirements=(OpSysAndVer == "SL6") && Target.Machine=!="hd-38-18.dice.priv"
++PostCmd        = "transfer_script_Co60-10s-15Mar"
+
+
+Arguments      = /usersc/cc14398/StationarySourceGate/gateSplitDir/.Gate//Co60-10s-15Mar//Co60-10s-15Mar1.mac
+Output         = /storage/cc14398/Co60-10s-15Mar/Co60-10s-15Mar1.out
+Error          = /storage/cc14398/Co60-10s-15Mar/Co60-10s-15Mar1.err
+Log            = /storage/cc14398/Co60-10s-15Mar/Co60-10s-15Mar1.log
+Queue
+
+Arguments      = /usersc/cc14398/StationarySourceGate/gateSplitDir/.Gate//Co60-10s-15Mar//Co60-10s-15Mar2.mac
+Output         = /storage/cc14398/Co60-10s-15Mar/Co60-10s-15Mar2.out
+Error          = /storage/cc14398/Co60-10s-15Mar/Co60-10s-15Mar2.err
+Log            = /storage/cc14398/Co60-10s-15Mar/Co60-10s-15Mar2.log
+Queue
+
+Arguments      = /usersc/cc14398/StationarySourceGate/gateSplitDir/.Gate//Co60-10s-15Mar//Co60-10s-15Mar3.mac
+Output         = /storage/cc14398/Co60-10s-15Mar/Co60-10s-15Mar3.out
+Error          = /storage/cc14398/Co60-10s-15Mar/Co60-10s-15Mar3.err
+Log            = /storage/cc14398/Co60-10s-15Mar/Co60-10s-15Mar3.log
+Queue
+
+Arguments      = /usersc/cc14398/StationarySourceGate/gateSplitDir/.Gate//Co60-10s-15Mar//Co60-10s-15Mar4.mac
+Output         = /storage/cc14398/Co60-10s-15Mar/Co60-10s-15Mar4.out
+Error          = /storage/cc14398/Co60-10s-15Mar/Co60-10s-15Mar4.err
+Log            = /storage/cc14398/Co60-10s-15Mar/Co60-10s-15Mar4.log
+Queue
+
+Arguments      = /usersc/cc14398/StationarySourceGate/gateSplitDir/.Gate//Co60-10s-15Mar//Co60-10s-15Mar5.mac
+Output         = /storage/cc14398/Co60-10s-15Mar/Co60-10s-15Mar5.out
+Error          = /storage/cc14398/Co60-10s-15Mar/Co60-10s-15Mar5.err
+Log            = /storage/cc14398/Co60-10s-15Mar/Co60-10s-15Mar5.log
+Queue
+
+Arguments      = /usersc/cc14398/StationarySourceGate/gateSplitDir/.Gate//Co60-10s-15Mar//Co60-10s-15Mar6.mac
+Output         = /storage/cc14398/Co60-10s-15Mar/Co60-10s-15Mar6.out
+Error          = /storage/cc14398/Co60-10s-15Mar/Co60-10s-15Mar6.err
+Log            = /storage/cc14398/Co60-10s-15Mar/Co60-10s-15Mar6.log
+Queue
+
+Arguments      = /usersc/cc14398/StationarySourceGate/gateSplitDir/.Gate//Co60-10s-15Mar//Co60-10s-15Mar7.mac
+Output         = /storage/cc14398/Co60-10s-15Mar/Co60-10s-15Mar7.out
+Error          = /storage/cc14398/Co60-10s-15Mar/Co60-10s-15Mar7.err
+Log            = /storage/cc14398/Co60-10s-15Mar/Co60-10s-15Mar7.log
+Queue
+
+Arguments      = /usersc/cc14398/StationarySourceGate/gateSplitDir/.Gate//Co60-10s-15Mar//Co60-10s-15Mar8.mac
+Output         = /storage/cc14398/Co60-10s-15Mar/Co60-10s-15Mar8.out
+Error          = /storage/cc14398/Co60-10s-15Mar/Co60-10s-15Mar8.err
+Log            = /storage/cc14398/Co60-10s-15Mar/Co60-10s-15Mar8.log
+Queue
+
+Arguments      = /usersc/cc14398/StationarySourceGate/gateSplitDir/.Gate//Co60-10s-15Mar//Co60-10s-15Mar9.mac
+Output         = /storage/cc14398/Co60-10s-15Mar/Co60-10s-15Mar9.out
+Error          = /storage/cc14398/Co60-10s-15Mar/Co60-10s-15Mar9.err
+Log            = /storage/cc14398/Co60-10s-15Mar/Co60-10s-15Mar9.log
+Queue
+
+Arguments      = /usersc/cc14398/StationarySourceGate/gateSplitDir/.Gate//Co60-10s-15Mar//Co60-10s-15Mar10.mac
+Output         = /storage/cc14398/Co60-10s-15Mar/Co60-10s-15Mar10.out
+Error          = /storage/cc14398/Co60-10s-15Mar/Co60-10s-15Mar10.err
+Log            = /storage/cc14398/Co60-10s-15Mar/Co60-10s-15Mar10.log
+Queue
+

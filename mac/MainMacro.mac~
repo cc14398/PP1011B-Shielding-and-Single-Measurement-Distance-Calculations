@@ -9,10 +9,10 @@
 ## VISUALISATION & VERBOSE
 ## =====================================================
 
-/vis/disable
-#/control/execute mac/visu.mac
-#/vis/scene/endOfEventAction accumulate 100
-#/vis/viewer/set/viewpointThetaPhi 90 0
+#/vis/disable
+/control/execute mac/visu.mac
+/vis/scene/endOfEventAction accumulate 100
+/vis/viewer/set/viewpointThetaPhi 90 0
 
 ## =====================================================
 ## Materials
@@ -23,7 +23,7 @@
 ## =====================================================
 ## World and Physics 
 ## =====================================================
-/gate/world/geometry/setXLength 22 m
+/gate/world/geometry/setXLength 8 m
 /gate/world/geometry/setYLength 2 m
 /gate/world/geometry/setZLength 2 m
 /gate/world/setMaterial Air
@@ -42,19 +42,26 @@
 #/control/execute mac/SubMacros/Detector3.mac
 #/control/execute mac/SubMacros/Detector4.mac
 
-/control/execute mac/SubMacros/Backpack.mac
+#/control/execute mac/SubMacros/Backpack.mac
 #/control/execute mac/SubMacros/Phantom1.mac
 
-/control/execute mac/SubMacros/PS1m.mac
-/control/execute mac/SubMacros/PS2m.mac
-/control/execute mac/SubMacros/PS3m.mac
-/control/execute mac/SubMacros/PS4m.mac
-/control/execute mac/SubMacros/PS5m.mac
-/control/execute mac/SubMacros/PS6m.mac
-/control/execute mac/SubMacros/PS7m.mac
-/control/execute mac/SubMacros/PS8m.mac
-/control/execute mac/SubMacros/PS9m.mac
-/control/execute mac/SubMacros/PS10m.mac
+#/control/execute mac/SubMacros/PS1m.mac
+#/control/execute mac/SubMacros/PS2m.mac
+#/control/execute mac/SubMacros/PS3m.mac
+#/control/execute mac/SubMacros/PS4m.mac
+#/control/execute mac/SubMacros/PS5m.mac
+#/control/execute mac/SubMacros/PS6m.mac
+#/control/execute mac/SubMacros/PS7m.mac
+#/control/execute mac/SubMacros/PS8m.mac
+#/control/execute mac/SubMacros/PS9m.mac
+#/control/execute mac/SubMacros/PS10m.mac
+
+/control/execute mac/SubMacros/PS50cm.mac
+/control/execute mac/SubMacros/PS150cm.mac
+/control/execute mac/SubMacros/PS250cm.mac
+/control/execute mac/SubMacros/PS350cm.mac
+/control/execute mac/SubMacros/PS450cm.mac
+/control/execute mac/SubMacros/PS550cm.mac
 
 /gate/physics/displayCuts
 
@@ -68,6 +75,7 @@
 ## BEAMS
 ## =====================================================
 /control/execute mac/SubMacros/Cobalt60.mac
+#/control/execute mac/SubMacros/Caesium137.mac
 
 ## =====================================================
 ## START BEAMS
@@ -80,5 +88,5 @@
 /gate/random/setEngineSeed 123455
 /gate/application/noGlobalOutput
 
-/gate/application/setTotalNumberOfPrimaries 10000
+/gate/application/setTotalNumberOfPrimaries 100
 /gate/application/start

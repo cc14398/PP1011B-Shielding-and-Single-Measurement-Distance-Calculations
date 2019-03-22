@@ -1,0 +1,85 @@
+##### ===========================================================================================
+##
+##    MACRO FILE - Cyclinder source on box example - FEB 2019
+##
+##### ===========================================================================================
+
+
+## =====================================================
+## VISUALISATION & VERBOSE
+## =====================================================
+
+/vis/disable
+#/control/execute mac/visu.mac
+#/vis/scene/endOfEventAction accumulate 100
+#/vis/viewer/set/viewpointThetaPhi 90 0
+
+## =====================================================
+## Materials
+## =====================================================
+
+/gate/geometry/setMaterialDatabase GateMaterials.db
+
+## =====================================================
+## World and Physics 
+## =====================================================
+/gate/world/geometry/setXLength 22 m
+/gate/world/geometry/setYLength 2 m
+/gate/world/geometry/setZLength 2 m
+/gate/world/setMaterial Air
+
+/gate/physics/addPhysicsList emstandard_opt3
+
+/gate/physics/Gamma/SetCutInRegion      world 2 mm
+/gate/physics/Electron/SetCutInRegion   world 2 mm
+/gate/physics/Positron/SetCutInRegion   world 2 mm
+## =====================================================
+## Geometry, Physics and Output for Each Object
+## =====================================================
+
+#/control/execute mac/SubMacros/Detector1.mac
+#/control/execute mac/SubMacros/Detector2.mac
+#/control/execute mac/SubMacros/Detector3.mac
+#/control/execute mac/SubMacros/Detector4.mac
+
+#/control/execute mac/SubMacros/Backpack.mac
+#/control/execute mac/SubMacros/Phantom1.mac
+
+/control/execute mac/SubMacros/PS1m.mac
+/control/execute mac/SubMacros/PS2m.mac
+/control/execute mac/SubMacros/PS3m.mac
+/control/execute mac/SubMacros/PS4m.mac
+/control/execute mac/SubMacros/PS5m.mac
+/control/execute mac/SubMacros/PS6m.mac
+/control/execute mac/SubMacros/PS7m.mac
+/control/execute mac/SubMacros/PS8m.mac
+/control/execute mac/SubMacros/PS9m.mac
+/control/execute mac/SubMacros/PS10m.mac
+
+/gate/physics/displayCuts
+
+## =====================================================
+## INITIALISATION
+## =====================================================
+
+/gate/run/initialize
+
+## =====================================================
+## BEAMS
+## =====================================================
+/control/execute mac/SubMacros/Cobalt60cluster.mac
+#/control/execute mac/SubMacros/Caesium137.mac
+
+## =====================================================
+## START BEAMS
+## =====================================================
+/gate/application/setTimeSlice 0.1 s
+/gate/application/setTimeStart 0. s
+/gate/application/setTimeStop 1. s
+
+/gate/random/setEngineName MersenneTwister
+/gate/random/setEngineSeed 123455
+/gate/application/noGlobalOutput
+
+#/gate/application/setTotalNumberOfPrimaries 100
+/gate/application/start

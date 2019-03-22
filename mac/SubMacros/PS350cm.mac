@@ -1,0 +1,44 @@
+#=====================================================
+# Define Box 
+#=====================================================
+
+/gate/world/daughters/name             PSBox350c
+/gate/world/daughters/insert            box
+/gate/PSBox350c/placement/setTranslation  3.5 0. 0. m
+#/gate/PSBox350c/placement/setRotationAxis 0 1 0
+#/gate/PSBox350c/placement/setRotationAngle 45 deg
+/gate/PSBox350c/geometry/setXLength   5 cm
+/gate/PSBox350c/geometry/setYLength   5 cm
+/gate/PSBox350c/geometry/setZLength   5 cm
+/gate/PSBox350c/setMaterial Air
+/gate/PSBox350c/vis/setVisible 1
+/gate/PSBox350c/vis/setColor             white
+
+##################### PHYSICS CUTS ######################
+#Cut on max step size at least 1/100 thickness of volume being traversed by particles
+/gate/physics/Gamma/SetCutInRegion      PSBox350c 0.05 mm 
+/gate/physics/Electron/SetCutInRegion   PSBox350c 0.05 mm
+/gate/physics/Positron/SetCutInRegion   PSBox350c 0.05 mm
+
+######################## Output #########################
+#/gate/actor/addActor                           DoseActor  EnergyDepDet50c
+#/gate/actor/EnergyDepDet50c/save                  Detector50c.txt
+#/gate/actor/EnergyDepDet50c/attachTo              Detector50c 
+#/gate/actor/EnergyDepDet50c/stepHitType           random
+#/gate/actor/EnergyDepDet50c/setPosition           0.0 0.0 0.0 mm #Now in coordinate system of box
+#/gate/actor/EnergyDepDet50c/setSize               5 5 5 cm
+#/gate/actor/EnergyDepDet50c/setResolution         10 10 10 
+#/gate/actor/EnergyDepDet50c/enableEdep            true
+#/gate/actor/EnergyDepDet50c/enableDose            false
+#/gate/actor/EnergyDepDet50c/enableSquaredEdep     true #options not typed are false by default except Dose
+#/gate/actor/EnergyDepDet50c/enableNumberOfHits    true #turn on as required
+
+/gate/actor/addActor                      PhaseSpaceActor PS350cm
+/gate/actor/PS350cm/save                    PS350cm.root
+/gate/actor/PS350cm/attachTo                PSBox350c
+/gate/actor/PS350cm/enableEkine             true
+/gate/actor/PS350cm/enableXDirection        true
+/gate/actor/PS350cm/enableYDirection        true
+/gate/actor/PS350cm/enableZDirection        true
+/gate/actor/PS350cm/enableProductionVolume  true
+/gate/actor/PS350cm/enableProductionProcess true

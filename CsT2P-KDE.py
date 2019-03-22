@@ -1,0 +1,67 @@
+import numpy as np
+import scipy as sp
+import math
+from matplotlib import pylab as plt
+from ROOT import TTree, TFile, TH2D, TCanvas, TH1F, gROOT
+from root_numpy import array2hist, hist2array, fill_hist, tree2array,root2array
+from scipy.stats import gaussian_kde
+
+input1="../../../storage/cc14398/Cs137-10s-18Mar/PS1m.root"
+#input2="../../../storage/cc14398/Cs137-10s-18Mar/PS2m.root"
+input3="../../../storage/cc14398/Cs137-10s-18Mar/PS3m.root"
+#input4="../../../storage/cc14398/Cs137-10s-18Mar/PS4m.root"
+input5="../../../storage/cc14398/Cs137-10s-18Mar/PS5m.root"
+input6="../../../storage/cc14398/Cs137-10s-18Mar/PS6m.root"
+
+KE1=root2array(input1,treename="PhaseSpace", branches="Ekine")
+#KE2=root2array(input2,treename="PhaseSpace",branches="Ekine")
+KE3=root2array(input3,treename="PhaseSpace",branches="Ekine")
+#KE4=root2array(input4,treename="PhaseSpace",branches="Ekine")
+KE5=root2array(input5,treename="PhaseSpace",branches="Ekine")
+KE6=root2array(input6,treename="PhaseSpace",branches="Ekine")
+
+
+#dX=root2array(inputFile,treename="PhaseSpace", branches="dX")
+
+density1=gaussian_kde(KE1)
+#density2=gaussian_kde(KE2)
+density3=gaussian_kde(KE3)
+#density4=gaussian_kde(KE4)
+density5=gaussian_kde(KE5)
+density6=gaussian_kde(KE6)
+
+
+#plt.hist(KE4,bins=20)
+#plt.hist2d(E_kinetic,dX)
+
+
+#fig, ax1 = plt.subplots()
+#ax1.hist([KE1,KE2,KE3], label=['1m','3m','7m'],bins=15,density=True)
+
+#plt.hist(KE1,20,alpha=0.5,label='1m',range=[0,1.1],density=True)
+#plt.hist(KE2,20,alpha=0.5,label='4m',range=[0,1.1],density=True)
+#plt.hist(KE3,20,alpha=0.5,label='7m',range=[0,1.1],density=True)
+
+xs=np.linspace(0,0.8,200)
+density1.covariance_factor = lambda : .1
+density1._compute_covariance()
+plt.plot(xs,density1(xs),label='1m')
+#density2.covariance_factor = lambda : .1
+#density2._compute_covariance()
+#plt.plot(xs,density2(xs),label='2m')
+density3.covariance_factor = lambda : .1
+density3._compute_covariance()
+plt.plot(xs,density3(xs),label='3m')
+#density4.covariance_factor = lambda : .1
+#density4._compute_covariance()
+#plt.plot(xs,density4(xs),label='4m')
+density5.covariance_factor = lambda : .1
+density5._compute_covariance()
+plt.plot(xs,density5(xs),label='5m')
+density6.covariance_factor = lambda : .1
+density6._compute_covariance()
+plt.plot(xs,density6(xs),label='6m')
+
+plt.legend()
+plt.pause(0.01)
+input("press enter to exit")

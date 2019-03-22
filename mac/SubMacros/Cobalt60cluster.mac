@@ -1,0 +1,29 @@
+#=====================================================
+# SOURCE 
+#=====================================================
+
+/gate/source/addSource Cobalt60
+/gate/source/Cobalt60/gps/type Volume
+/gate/source/Cobalt60/gps/shape Cylinder
+/gate/source/Cobalt60/gps/radius 5. cm
+/gate/source/Cobalt60/gps/halfz 5 cm
+/gate/source/Cobalt60/gps/centre 0. 0. 0. cm
+
+#/gate/source/Cobalt60/particle ion
+#/gate/source/Cobalt60/gps/ion 27 60 0 0 
+#/gate/source/Cobalt60/setForcedUnstableFlag true
+#/gate/source/Cobalt60/useDefaultHalfLife
+
+/gate/source/Cobalt60/gps/particle gamma
+/gate/source/Cobalt60/gps/energytype UserSpectrum
+/gate/source/Cobalt60/gps/setSpectrumFile /usersc/cc14398/StationarySourceGate/mac/SubMacros/Co60Discrete.txt
+/gate/source/Cobalt60/setActivity 37000000. Bq
+/gate/source/Cobalt60/setForcedHalfLife 166308552. s
+/gate/source/Cobalt60/gps/angtype iso
+#/gate/source/Cobalt60/gps/mintheta 270. deg
+#/gate/source/Cobalt60/gps/maxtheta 270. deg
+#/gate/source/Cobalt60/gps/minphi 180. deg
+#/gate/source/Cobalt60/gps/maxphi 180. deg
+
+#/gate/source/Cobalt60/attachTo Phantom1
+

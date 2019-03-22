@@ -20,10 +20,10 @@
 /gate/source/Cobalt60/setActivity 37000000. Bq
 /gate/source/Cobalt60/setForcedHalfLife 166308552. s
 /gate/source/Cobalt60/gps/angtype iso
-/gate/source/Cobalt60/gps/mintheta 90. deg
-/gate/source/Cobalt60/gps/maxtheta 90. deg
-/gate/source/Cobalt60/gps/minphi 0. deg
-/gate/source/Cobalt60/gps/maxphi 0. deg
+#/gate/source/Cobalt60/gps/mintheta 270. deg
+#/gate/source/Cobalt60/gps/maxtheta 270. deg
+#/gate/source/Cobalt60/gps/minphi 180. deg
+#/gate/source/Cobalt60/gps/maxphi 180. deg
 
 #/gate/source/Cobalt60/attachTo Phantom1
 
