@@ -1,0 +1,144 @@
+/vis/disable
+/gate/geometry/setMaterialDatabase GateMaterials.db
+/gate/world/geometry/setXLength 4 m
+/gate/world/geometry/setYLength 2 m
+/gate/world/geometry/setZLength 2 m
+/gate/world/setMaterial Air
+/gate/physics/addPhysicsList emstandard_opt3
+/gate/physics/Gamma/SetCutInRegion world 2 mm
+/gate/physics/Electron/SetCutInRegion world 2 mm
+/gate/physics/Positron/SetCutInRegion world 2 mm
+/gate/world/daughters/name PSBox183c
+/gate/world/daughters/insert box
+/gate/PSBox183c/placement/setTranslation 1.83 0. 0. m
+/gate/PSBox183c/geometry/setXLength 5 cm
+/gate/PSBox183c/geometry/setYLength 5 cm
+/gate/PSBox183c/geometry/setZLength 5 cm
+/gate/PSBox183c/setMaterial Air
+/gate/PSBox183c/vis/setVisible 1
+/gate/PSBox183c/vis/setColor white
+/gate/physics/Gamma/SetCutInRegion PSBox183c 0.05 mm
+/gate/physics/Electron/SetCutInRegion PSBox183c 0.05 mm
+/gate/physics/Positron/SetCutInRegion PSBox183c 0.05 mm
+/gate/actor/addActor PhaseSpaceActor PS183cm
+/gate/actor/PS183cm/save PS183cm8.root
+/gate/actor/PS183cm/attachTo PSBox183c
+/gate/actor/PS183cm/enableEkine true
+/gate/actor/PS183cm/enableXDirection true
+/gate/actor/PS183cm/enableYDirection true
+/gate/actor/PS183cm/enableZDirection true
+/gate/actor/PS183cm/enableProductionVolume true
+/gate/actor/PS183cm/enableProductionProcess true
+
+/gate/world/daughters/name PSBox129c
+/gate/world/daughters/insert box
+/gate/PSBox129c/placement/setTranslation 1.29 0. 0. m
+/gate/PSBox129c/geometry/setXLength 5 cm
+/gate/PSBox129c/geometry/setYLength 5 cm
+/gate/PSBox129c/geometry/setZLength 5 cm
+/gate/PSBox129c/setMaterial Air
+/gate/PSBox129c/vis/setVisible 1
+/gate/PSBox129c/vis/setColor white
+/gate/physics/Gamma/SetCutInRegion PSBox129c 0.05 mm
+/gate/physics/Electron/SetCutInRegion PSBox129c 0.05 mm
+/gate/physics/Positron/SetCutInRegion PSBox129c 0.05 mm
+/gate/actor/addActor PhaseSpaceActor PS129cm
+/gate/actor/PS129cm/save PS129cm8.root
+/gate/actor/PS129cm/attachTo PSBox129c
+/gate/actor/PS129cm/enableEkine true
+/gate/actor/PS129cm/enableXDirection true
+/gate/actor/PS129cm/enableYDirection true
+/gate/actor/PS129cm/enableZDirection true
+/gate/actor/PS129cm/enableProductionVolume true
+/gate/actor/PS129cm/enableProductionProcess true
+
+/gate/world/daughters/name PSBox120c
+/gate/world/daughters/insert box
+/gate/PSBox120c/placement/setTranslation 1.2 0. 0. m
+/gate/PSBox120c/geometry/setXLength 5 cm
+/gate/PSBox120c/geometry/setYLength 5 cm
+/gate/PSBox120c/geometry/setZLength 5 cm
+/gate/PSBox120c/setMaterial Air
+/gate/PSBox120c/vis/setVisible 1
+/gate/PSBox120c/vis/setColor white
+/gate/physics/Gamma/SetCutInRegion PSBox120c 0.05 mm
+/gate/physics/Electron/SetCutInRegion PSBox120c 0.05 mm
+/gate/physics/Positron/SetCutInRegion PSBox120c 0.05 mm
+/gate/actor/addActor PhaseSpaceActor PS120cm
+/gate/actor/PS120cm/save PS120cm8.root
+/gate/actor/PS120cm/attachTo PSBox120c
+/gate/actor/PS120cm/enableEkine true
+/gate/actor/PS120cm/enableXDirection true
+/gate/actor/PS120cm/enableYDirection true
+/gate/actor/PS120cm/enableZDirection true
+/gate/actor/PS120cm/enableProductionVolume true
+/gate/actor/PS120cm/enableProductionProcess true
+
+/gate/world/daughters/name PSBox112c
+/gate/world/daughters/insert box
+/gate/PSBox112c/placement/setTranslation 1.12 0. 0. m
+/gate/PSBox112c/geometry/setXLength 5 cm
+/gate/PSBox112c/geometry/setYLength 5 cm
+/gate/PSBox112c/geometry/setZLength 5 cm
+/gate/PSBox112c/setMaterial Air
+/gate/PSBox112c/vis/setVisible 1
+/gate/PSBox112c/vis/setColor white
+/gate/physics/Gamma/SetCutInRegion PSBox112c 0.05 mm
+/gate/physics/Electron/SetCutInRegion PSBox112c 0.05 mm
+/gate/physics/Positron/SetCutInRegion PSBox112c 0.05 mm
+/gate/actor/addActor PhaseSpaceActor PS112cm
+/gate/actor/PS112cm/save PS112cm8.root
+/gate/actor/PS112cm/attachTo PSBox112c
+/gate/actor/PS112cm/enableEkine true
+/gate/actor/PS112cm/enableXDirection true
+/gate/actor/PS112cm/enableYDirection true
+/gate/actor/PS112cm/enableZDirection true
+/gate/actor/PS112cm/enableProductionVolume true
+/gate/actor/PS112cm/enableProductionProcess true
+
+/gate/world/daughters/name PSBox105c
+/gate/world/daughters/insert box
+/gate/PSBox105c/placement/setTranslation 1.05 0. 0. m
+/gate/PSBox105c/geometry/setXLength 5 cm
+/gate/PSBox105c/geometry/setYLength 5 cm
+/gate/PSBox105c/geometry/setZLength 5 cm
+/gate/PSBox105c/setMaterial Air
+/gate/PSBox105c/vis/setVisible 1
+/gate/PSBox105c/vis/setColor white
+/gate/physics/Gamma/SetCutInRegion PSBox105c 0.05 mm
+/gate/physics/Electron/SetCutInRegion PSBox105c 0.05 mm
+/gate/physics/Positron/SetCutInRegion PSBox105c 0.05 mm
+/gate/actor/addActor PhaseSpaceActor PS105cm
+/gate/actor/PS105cm/save PS105cm8.root
+/gate/actor/PS105cm/attachTo PSBox105c
+/gate/actor/PS105cm/enableEkine true
+/gate/actor/PS105cm/enableXDirection true
+/gate/actor/PS105cm/enableYDirection true
+/gate/actor/PS105cm/enableZDirection true
+/gate/actor/PS105cm/enableProductionVolume true
+/gate/actor/PS105cm/enableProductionProcess true
+
+/gate/physics/displayCuts
+/gate/run/initialize
+/gate/source/addSource Cobalt60
+/gate/source/Cobalt60/gps/type Volume
+/gate/source/Cobalt60/gps/shape Cylinder
+/gate/source/Cobalt60/gps/radius 5. cm
+/gate/source/Cobalt60/gps/halfz 5 cm
+/gate/source/Cobalt60/gps/centre 0. 0. 0. cm
+/gate/source/Cobalt60/gps/particle gamma
+/gate/source/Cobalt60/gps/energytype UserSpectrum
+/gate/source/Cobalt60/gps/setSpectrumFile /usersc/cc14398/StationarySourceGate/mac/SubMacros/Co60Discrete.txt
+/gate/source/Cobalt60/setActivity 37000000. Bq
+/gate/source/Cobalt60/setForcedHalfLife 166308552. s
+/gate/source/Cobalt60/gps/angtype iso
+
+/gate/application/setTimeSlice 1.0 s
+/gate/application/setTimeStart 0. s
+/gate/application/setTimeStop 10. s
+/gate/random/setEngineName MersenneTwister
+
+/gate/application/noGlobalOutput
+/gate/random/setEngineSeed 1867160140043787465
+/gate/application/startDAQCluster 7 8 0 s
+

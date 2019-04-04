@@ -1,0 +1,80 @@
+universe = vanilla
+getenv = true
+Executable     = /software/lb8075/gate/GateInstall/bin/Gate
+transfer_input_files = transfers/transfer_script_U235-10s-1Apr, GateMaterials.db, Materials.xml
+request_cpus = 1
+request_memory = 120
+when_to_transfer_output = on_exit_or_evict
+requirements=(OpSysAndVer == "SL6") && Target.Machine=!="hd-38-18.dice.priv"
++PostCmd        = "transfer_script_U235-10s-1Apr"
+universe = vanilla
+getenv = true
+Executable     = /software/lb8075/gate/GateInstall/bin/Gate
+transfer_input_files = transfers/transfer_script_U235-10s-3Apr, GateMaterials.db, Materials.xml
+request_cpus = 1
+request_memory = 120
+when_to_transfer_output = on_exit_or_evict
+requirements=(OpSysAndVer == "SL6") && Target.Machine=!="hd-38-18.dice.priv"
++PostCmd        = "transfer_script_U235-10s-3Apr"
+
+
+Arguments      = /usersc/cc14398/StationarySourceGate/gateSplitDir/.Gate//U235-10s-3Apr//U235-10s-3Apr1.mac
+Output         = /storage/cc14398/U235-10s-3Apr/U235-10s-3Apr1.out
+Error          = /storage/cc14398/U235-10s-3Apr/U235-10s-3Apr1.err
+Log            = /storage/cc14398/U235-10s-3Apr/U235-10s-3Apr1.log
+Queue
+
+Arguments      = /usersc/cc14398/StationarySourceGate/gateSplitDir/.Gate//U235-10s-3Apr//U235-10s-3Apr2.mac
+Output         = /storage/cc14398/U235-10s-3Apr/U235-10s-3Apr2.out
+Error          = /storage/cc14398/U235-10s-3Apr/U235-10s-3Apr2.err
+Log            = /storage/cc14398/U235-10s-3Apr/U235-10s-3Apr2.log
+Queue
+
+Arguments      = /usersc/cc14398/StationarySourceGate/gateSplitDir/.Gate//U235-10s-3Apr//U235-10s-3Apr3.mac
+Output         = /storage/cc14398/U235-10s-3Apr/U235-10s-3Apr3.out
+Error          = /storage/cc14398/U235-10s-3Apr/U235-10s-3Apr3.err
+Log            = /storage/cc14398/U235-10s-3Apr/U235-10s-3Apr3.log
+Queue
+
+Arguments      = /usersc/cc14398/StationarySourceGate/gateSplitDir/.Gate//U235-10s-3Apr//U235-10s-3Apr4.mac
+Output         = /storage/cc14398/U235-10s-3Apr/U235-10s-3Apr4.out
+Error          = /storage/cc14398/U235-10s-3Apr/U235-10s-3Apr4.err
+Log            = /storage/cc14398/U235-10s-3Apr/U235-10s-3Apr4.log
+Queue
+
+Arguments      = /usersc/cc14398/StationarySourceGate/gateSplitDir/.Gate//U235-10s-3Apr//U235-10s-3Apr5.mac
+Output         = /storage/cc14398/U235-10s-3Apr/U235-10s-3Apr5.out
+Error          = /storage/cc14398/U235-10s-3Apr/U235-10s-3Apr5.err
+Log            = /storage/cc14398/U235-10s-3Apr/U235-10s-3Apr5.log
+Queue
+
+Arguments      = /usersc/cc14398/StationarySourceGate/gateSplitDir/.Gate//U235-10s-3Apr//U235-10s-3Apr6.mac
+Output         = /storage/cc14398/U235-10s-3Apr/U235-10s-3Apr6.out
+Error          = /storage/cc14398/U235-10s-3Apr/U235-10s-3Apr6.err
+Log            = /storage/cc14398/U235-10s-3Apr/U235-10s-3Apr6.log
+Queue
+
+Arguments      = /usersc/cc14398/StationarySourceGate/gateSplitDir/.Gate//U235-10s-3Apr//U235-10s-3Apr7.mac
+Output         = /storage/cc14398/U235-10s-3Apr/U235-10s-3Apr7.out
+Error          = /storage/cc14398/U235-10s-3Apr/U235-10s-3Apr7.err
+Log            = /storage/cc14398/U235-10s-3Apr/U235-10s-3Apr7.log
+Queue
+
+Arguments      = /usersc/cc14398/StationarySourceGate/gateSplitDir/.Gate//U235-10s-3Apr//U235-10s-3Apr8.mac
+Output         = /storage/cc14398/U235-10s-3Apr/U235-10s-3Apr8.out
+Error          = /storage/cc14398/U235-10s-3Apr/U235-10s-3Apr8.err
+Log            = /storage/cc14398/U235-10s-3Apr/U235-10s-3Apr8.log
+Queue
+
+Arguments      = /usersc/cc14398/StationarySourceGate/gateSplitDir/.Gate//U235-10s-3Apr//U235-10s-3Apr9.mac
+Output         = /storage/cc14398/U235-10s-3Apr/U235-10s-3Apr9.out
+Error          = /storage/cc14398/U235-10s-3Apr/U235-10s-3Apr9.err
+Log            = /storage/cc14398/U235-10s-3Apr/U235-10s-3Apr9.log
+Queue
+
+Arguments      = /usersc/cc14398/StationarySourceGate/gateSplitDir/.Gate//U235-10s-3Apr//U235-10s-3Apr10.mac
+Output         = /storage/cc14398/U235-10s-3Apr/U235-10s-3Apr10.out
+Error          = /storage/cc14398/U235-10s-3Apr/U235-10s-3Apr10.err
+Log            = /storage/cc14398/U235-10s-3Apr/U235-10s-3Apr10.log
+Queue
+

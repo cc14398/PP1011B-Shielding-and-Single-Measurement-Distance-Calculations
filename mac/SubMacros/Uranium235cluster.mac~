@@ -1,0 +1,17 @@
+#=====================================================
+# SOURCE 
+#=====================================================
+
+/gate/source/addSource Uranium235
+/gate/source/Uranium235/gps/type Volume
+/gate/source/Uranium235/gps/shape Cylinder
+/gate/source/Uranium235/gps/radius 5. cm
+/gate/source/Uranium235/gps/centre 0. 0. 0. cm
+/gate/source/Uranium235/gps/particle gamma
+/gate/source/Uranium235/gps/energytype UserSpectrum
+/gate/source/Uranium235/gps/setSpectrumFile usersc/cc14398/StationarySourceGate/mac/SubMacros/DiscreteSpectrumU235.txt
+/gate/source/Uranium235/setActivity 37000000. Bq
+/gate/source/Uranium235/setForcedHalfLife 951441120. s
+/gate/source/Uranium235/gps/angtype iso
+#/gate/source/Uranium235/attachTo Phantom1
+

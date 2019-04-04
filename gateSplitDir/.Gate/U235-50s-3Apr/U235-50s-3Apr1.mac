@@ -1,0 +1,231 @@
+/vis/disable
+/gate/geometry/setMaterialDatabase GateMaterials.db
+/gate/world/geometry/setXLength 22 m
+/gate/world/geometry/setYLength 2 m
+/gate/world/geometry/setZLength 2 m
+/gate/world/setMaterial Air
+/gate/physics/addPhysicsList emstandard_opt3
+/gate/physics/Gamma/SetCutInRegion world 2 mm
+/gate/physics/Electron/SetCutInRegion world 2 mm
+/gate/physics/Positron/SetCutInRegion world 2 mm
+/gate/world/daughters/name PSBox6
+/gate/world/daughters/insert box
+/gate/PSBox6/placement/setTranslation 6. 0. 0. m
+/gate/PSBox6/geometry/setXLength 5 cm
+/gate/PSBox6/geometry/setYLength 5 cm
+/gate/PSBox6/geometry/setZLength 5 cm
+/gate/PSBox6/setMaterial Air
+/gate/PSBox6/vis/setVisible 1
+/gate/PSBox6/vis/setColor white
+/gate/physics/Gamma/SetCutInRegion PSBox6 0.05 mm
+/gate/physics/Electron/SetCutInRegion PSBox6 0.05 mm
+/gate/physics/Positron/SetCutInRegion PSBox6 0.05 mm
+/gate/actor/addActor PhaseSpaceActor PS6m
+/gate/actor/PS6m/save PS6m1.root
+/gate/actor/PS6m/attachTo PSBox6
+/gate/actor/PS6m/enableEkine true
+/gate/actor/PS6m/enableXDirection true
+/gate/actor/PS6m/enableYDirection true
+/gate/actor/PS6m/enableZDirection true
+/gate/actor/PS6m/enableProductionVolume true
+/gate/actor/PS6m/enableProductionProcess true
+
+/gate/world/daughters/name PSBox7
+/gate/world/daughters/insert box
+/gate/PSBox7/placement/setTranslation 7. 0. 0. m
+/gate/PSBox7/geometry/setXLength 5 cm
+/gate/PSBox7/geometry/setYLength 5 cm
+/gate/PSBox7/geometry/setZLength 5 cm
+/gate/PSBox7/setMaterial Air
+/gate/PSBox7/vis/setVisible 1
+/gate/PSBox7/vis/setColor white
+/gate/physics/Gamma/SetCutInRegion PSBox7 0.05 mm
+/gate/physics/Electron/SetCutInRegion PSBox7 0.05 mm
+/gate/physics/Positron/SetCutInRegion PSBox7 0.05 mm
+/gate/actor/addActor PhaseSpaceActor PS7m
+/gate/actor/PS7m/save PS7m1.root
+/gate/actor/PS7m/attachTo PSBox7
+/gate/actor/PS7m/enableEkine true
+/gate/actor/PS7m/enableXDirection true
+/gate/actor/PS7m/enableYDirection true
+/gate/actor/PS7m/enableZDirection true
+/gate/actor/PS7m/enableProductionVolume true
+/gate/actor/PS7m/enableProductionProcess true
+
+/gate/world/daughters/name PSBox8
+/gate/world/daughters/insert box
+/gate/PSBox8/placement/setTranslation 8. 0. 0. m
+/gate/PSBox8/geometry/setXLength 5 cm
+/gate/PSBox8/geometry/setYLength 5 cm
+/gate/PSBox8/geometry/setZLength 5 cm
+/gate/PSBox8/setMaterial Air
+/gate/PSBox8/vis/setVisible 1
+/gate/PSBox8/vis/setColor white
+/gate/physics/Gamma/SetCutInRegion PSBox8 0.05 mm
+/gate/physics/Electron/SetCutInRegion PSBox8 0.05 mm
+/gate/physics/Positron/SetCutInRegion PSBox8 0.05 mm
+/gate/actor/addActor PhaseSpaceActor PS8m
+/gate/actor/PS8m/save PS8m1.root
+/gate/actor/PS8m/attachTo PSBox8
+/gate/actor/PS8m/enableEkine true
+/gate/actor/PS8m/enableXDirection true
+/gate/actor/PS8m/enableYDirection true
+/gate/actor/PS8m/enableZDirection true
+/gate/actor/PS8m/enableProductionVolume true
+/gate/actor/PS8m/enableProductionProcess true
+
+/gate/world/daughters/name PSBox9
+/gate/world/daughters/insert box
+/gate/PSBox9/placement/setTranslation 9. 0. 0. m
+/gate/PSBox9/geometry/setXLength 5 cm
+/gate/PSBox9/geometry/setYLength 5 cm
+/gate/PSBox9/geometry/setZLength 5 cm
+/gate/PSBox9/setMaterial Air
+/gate/PSBox9/vis/setVisible 1
+/gate/PSBox9/vis/setColor white
+/gate/physics/Gamma/SetCutInRegion PSBox9 0.05 mm
+/gate/physics/Electron/SetCutInRegion PSBox9 0.05 mm
+/gate/physics/Positron/SetCutInRegion PSBox9 0.05 mm
+/gate/actor/addActor PhaseSpaceActor PS9m
+/gate/actor/PS9m/save PS9m1.root
+/gate/actor/PS9m/attachTo PSBox9
+/gate/actor/PS9m/enableEkine true
+/gate/actor/PS9m/enableXDirection true
+/gate/actor/PS9m/enableYDirection true
+/gate/actor/PS9m/enableZDirection true
+/gate/actor/PS9m/enableProductionVolume true
+/gate/actor/PS9m/enableProductionProcess true
+
+/gate/world/daughters/name PSBox10
+/gate/world/daughters/insert box
+/gate/PSBox10/placement/setTranslation 10. 0. 0. m
+/gate/PSBox10/geometry/setXLength 5 cm
+/gate/PSBox10/geometry/setYLength 5 cm
+/gate/PSBox10/geometry/setZLength 5 cm
+/gate/PSBox10/setMaterial Air
+/gate/PSBox10/vis/setVisible 1
+/gate/PSBox10/vis/setColor white
+/gate/physics/Gamma/SetCutInRegion PSBox10 0.05 mm
+/gate/physics/Electron/SetCutInRegion PSBox10 0.05 mm
+/gate/physics/Positron/SetCutInRegion PSBox10 0.05 mm
+/gate/actor/addActor PhaseSpaceActor PS10m
+/gate/actor/PS10m/save PS10m1.root
+/gate/actor/PS10m/attachTo PSBox10
+/gate/actor/PS10m/enableEkine true
+/gate/actor/PS10m/enableXDirection true
+/gate/actor/PS10m/enableYDirection true
+/gate/actor/PS10m/enableZDirection true
+/gate/actor/PS10m/enableProductionVolume true
+/gate/actor/PS10m/enableProductionProcess true
+
+/gate/world/daughters/name PSBox650c
+/gate/world/daughters/insert box
+/gate/PSBox650c/placement/setTranslation 6.5 0. 0. m
+/gate/PSBox650c/geometry/setXLength 5 cm
+/gate/PSBox650c/geometry/setYLength 5 cm
+/gate/PSBox650c/geometry/setZLength 5 cm
+/gate/PSBox650c/setMaterial Air
+/gate/PSBox650c/vis/setVisible 1
+/gate/PSBox650c/vis/setColor white
+/gate/physics/Gamma/SetCutInRegion PSBox650c 0.05 mm
+/gate/physics/Electron/SetCutInRegion PSBox650c 0.05 mm
+/gate/physics/Positron/SetCutInRegion PSBox650c 0.05 mm
+/gate/actor/addActor PhaseSpaceActor PS650cm
+/gate/actor/PS650cm/save PS650cm1.root
+/gate/actor/PS650cm/attachTo PSBox650c
+/gate/actor/PS650cm/enableEkine true
+/gate/actor/PS650cm/enableXDirection true
+/gate/actor/PS650cm/enableYDirection true
+/gate/actor/PS650cm/enableZDirection true
+/gate/actor/PS650cm/enableProductionVolume true
+/gate/actor/PS650cm/enableProductionProcess true
+
+/gate/world/daughters/name PSBox750c
+/gate/world/daughters/insert box
+/gate/PSBox750c/placement/setTranslation 7.5 0. 0. m
+/gate/PSBox750c/geometry/setXLength 5 cm
+/gate/PSBox750c/geometry/setYLength 5 cm
+/gate/PSBox750c/geometry/setZLength 5 cm
+/gate/PSBox750c/setMaterial Air
+/gate/PSBox750c/vis/setVisible 1
+/gate/PSBox750c/vis/setColor white
+/gate/physics/Gamma/SetCutInRegion PSBox750c 0.05 mm
+/gate/physics/Electron/SetCutInRegion PSBox750c 0.05 mm
+/gate/physics/Positron/SetCutInRegion PSBox750c 0.05 mm
+/gate/actor/addActor PhaseSpaceActor PS750cm
+/gate/actor/PS750cm/save PS750cm1.root
+/gate/actor/PS750cm/attachTo PSBox750c
+/gate/actor/PS750cm/enableEkine true
+/gate/actor/PS750cm/enableXDirection true
+/gate/actor/PS750cm/enableYDirection true
+/gate/actor/PS750cm/enableZDirection true
+/gate/actor/PS750cm/enableProductionVolume true
+/gate/actor/PS750cm/enableProductionProcess true
+
+/gate/world/daughters/name PSBox850c
+/gate/world/daughters/insert box
+/gate/PSBox850c/placement/setTranslation 8.5 0. 0. m
+/gate/PSBox850c/geometry/setXLength 5 cm
+/gate/PSBox850c/geometry/setYLength 5 cm
+/gate/PSBox850c/geometry/setZLength 5 cm
+/gate/PSBox850c/setMaterial Air
+/gate/PSBox850c/vis/setVisible 1
+/gate/PSBox850c/vis/setColor white
+/gate/physics/Gamma/SetCutInRegion PSBox850c 0.05 mm
+/gate/physics/Electron/SetCutInRegion PSBox850c 0.05 mm
+/gate/physics/Positron/SetCutInRegion PSBox850c 0.05 mm
+/gate/actor/addActor PhaseSpaceActor PS850cm
+/gate/actor/PS850cm/save PS850cm1.root
+/gate/actor/PS850cm/attachTo PSBox850c
+/gate/actor/PS850cm/enableEkine true
+/gate/actor/PS850cm/enableXDirection true
+/gate/actor/PS850cm/enableYDirection true
+/gate/actor/PS850cm/enableZDirection true
+/gate/actor/PS850cm/enableProductionVolume true
+/gate/actor/PS850cm/enableProductionProcess true
+
+/gate/world/daughters/name PSBox90c
+/gate/world/daughters/insert box
+/gate/PSBox950c/placement/setTranslation 9.5 0. 0. m
+/gate/PSBox950c/geometry/setXLength 5 cm
+/gate/PSBox950c/geometry/setYLength 5 cm
+/gate/PSBox950c/geometry/setZLength 5 cm
+/gate/PSBox950c/setMaterial Air
+/gate/PSBox950c/vis/setVisible 1
+/gate/PSBox950c/vis/setColor white
+/gate/physics/Gamma/SetCutInRegion PSBox950c 0.05 mm
+/gate/physics/Electron/SetCutInRegion PSBox950c 0.05 mm
+/gate/physics/Positron/SetCutInRegion PSBox950c 0.05 mm
+/gate/actor/addActor PhaseSpaceActor PS950cm
+/gate/actor/PS950cm/save P9S50cm1.root
+/gate/actor/PS950cm/attachTo PSBox950c
+/gate/actor/PS950cm/enableEkine true
+/gate/actor/PS950cm/enableXDirection true
+/gate/actor/PS950cm/enableYDirection true
+/gate/actor/PS950cm/enableZDirection true
+/gate/actor/PS950cm/enableProductionVolume true
+/gate/actor/PS950cm/enableProductionProcess true
+
+/gate/physics/displayCuts
+/gate/run/initialize
+/gate/source/addSource Uranium235
+/gate/source/Uranium235/gps/type Volume
+/gate/source/Uranium235/gps/shape Cylinder
+/gate/source/Uranium235/gps/radius 5. cm
+/gate/source/Uranium235/gps/centre 0. 0. 0. cm
+/gate/source/Uranium235/gps/particle gamma
+/gate/source/Uranium235/gps/energytype UserSpectrum
+/gate/source/Uranium235/gps/setSpectrumFile /usersc/cc14398/StationarySourceGate/mac/SubMacros/DiscreteSpectrumU235.txt
+/gate/source/Uranium235/setActivity 37000000. Bq
+/gate/source/Uranium235/setForcedHalfLife 951441120. s
+/gate/source/Uranium235/gps/angtype iso
+
+/gate/application/setTimeSlice 1.0 s
+/gate/application/setTimeStart 0. s
+/gate/application/setTimeStop 50. s
+/gate/random/setEngineName MersenneTwister
+
+/gate/application/noGlobalOutput
+/gate/random/setEngineSeed 1843312154294312907
+/gate/application/startDAQCluster 0 5 0 s
+

@@ -23,7 +23,7 @@
 ## =====================================================
 ## World and Physics 
 ## =====================================================
-/gate/world/geometry/setXLength 12 m
+/gate/world/geometry/setXLength 4 m
 /gate/world/geometry/setYLength 2 m
 /gate/world/geometry/setZLength 2 m
 /gate/world/setMaterial Air
@@ -56,12 +56,12 @@
 #/control/execute mac/SubMacros/PS9m.mac
 #/control/execute mac/SubMacros/PS10m.mac
 
-/control/execute mac/SubMacros/PS50cm.mac
-/control/execute mac/SubMacros/PS150cm.mac
-/control/execute mac/SubMacros/PS250cm.mac
-/control/execute mac/SubMacros/PS350cm.mac
-/control/execute mac/SubMacros/PS450cm.mac
-/control/execute mac/SubMacros/PS550cm.mac
+/control/execute mac/SubMacros/PS183cm.mac
+/control/execute mac/SubMacros/PS129cm.mac
+/control/execute mac/SubMacros/PS120cm.mac
+/control/execute mac/SubMacros/PS112cm.mac
+/control/execute mac/SubMacros/PS105cm.mac
+#/control/execute mac/SubMacros/PS550cm.mac
 
 /gate/physics/displayCuts
 

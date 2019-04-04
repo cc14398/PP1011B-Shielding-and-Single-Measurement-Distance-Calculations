@@ -23,7 +23,7 @@
 ## =====================================================
 ## World and Physics 
 ## =====================================================
-/gate/world/geometry/setXLength 8 m
+/gate/world/geometry/setXLength 12 m
 /gate/world/geometry/setYLength 2 m
 /gate/world/geometry/setZLength 2 m
 /gate/world/setMaterial Air

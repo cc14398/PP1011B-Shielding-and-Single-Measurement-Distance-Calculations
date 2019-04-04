@@ -1,0 +1,10 @@
+#!/bin/sh 
+echo "I am running on" $HOSTNAME 
+hostname 
+uname -a 
+ls -la 
+
+/usr/bin/time --verbose /usr/bin/hdfs dfs -copyFromLocal *.root /user/cc14398/U235-10s-3Apr  
+/usr/bin/hdfs dfs -copyFromLocal *.txt /user/cc14398/U235-10s-3Apr  
+rm *.root  
+rm *.txt   
